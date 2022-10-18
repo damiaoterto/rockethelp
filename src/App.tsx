@@ -3,7 +3,7 @@ import { NativeBaseProvider, StatusBar } from 'native-base';
 import { useFonts, Roboto_400Regular, Roboto_700Bold } from '@expo-google-fonts/roboto';
 import { THEME } from './styles/theme';
 import { Loading } from './components/Loading';
-import SigIn from './screens/SignIn';
+import { Navigation } from './navigation';
 
 const App: React.FC = () => {
   const [fontLoaded] = useFonts({ Roboto_400Regular, Roboto_700Bold });
@@ -15,7 +15,7 @@ const App: React.FC = () => {
         backgroundColor={'transparent'}
         translucent
       />
-      {fontLoaded ? (<SigIn />) : (<Loading />) }
+      {fontLoaded ? (<Navigation />) : (<Loading />) }
     </NativeBaseProvider>
   );
 }

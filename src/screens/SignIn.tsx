@@ -5,7 +5,7 @@ import Logo from '../assets/logo_primary.svg';
 import { Input } from '../components/Input';
 import { Button } from '../components/Button';
 
-const SigIn: React.FC = () => {
+export const SignIn: React.FC = () => {
   const { colors } = useTheme();
 
   const [email, setEmail] = useState<string>('');
@@ -48,5 +48,3 @@ const SigIn: React.FC = () => {
     </VStack>
   )
 }
-
-export default SigIn;
